@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.login-container {
+    background-color: #fdfbef;
+    padding: 20px;
+    border-radius: 5px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6da6b3;
+}
+
+.login-page {
+    background-color: #fff;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.image {
+
+    height: 300px;
+    width: 265px;
+}
+
+.icon {
+    height: 95px;
+    width: 85px;
+    text-align: center;
+}
+
+.bg-container {
+    background-image: url("https://res.cloudinary.com/dtuv6pmjq/image/upload/v1712216856/vop/fade_en8klz.jpg");
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+}
+
+.button-top {
+    font-family: Roboto;
+    color: #5f6062;
+    font-size: 26px;
+    background-color: #dfdedf;
+    height: 65px;
+    width: 300px;
+    border-radius: 20px;
+    border-width: 0px;
+}
+
+.button-bottum {
+    font-family: Roboto;
+    font-size: 26px;
+    background-color: #5f6062;
+    height: 65px;
+    width: 300px;
+    border-radius: 20px;
+    border-width: 0px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 12em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: #f0eeee;
+  }
+  
+  .search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+  }
+  #wifi-loader {
+    --background: #62abff;
+    --front-color: #4f29f0;
+    --back-color: #c3c8de;
+    --text-color: #414856;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #wifi-loader svg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #wifi-loader svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(-100deg);
+    transform-origin: center;
+  }
+  
+  #wifi-loader svg circle.back {
+    stroke: var(--back-color);
+  }
+  
+  #wifi-loader svg circle.front {
+    stroke: var(--front-color);
+  }
+  
+  #wifi-loader svg.circle-outer {
+    height: 86px;
+    width: 86px;
+  }
+  
+  #wifi-loader svg.circle-outer circle {
+    stroke-dasharray: 62.75 188.25;
+  }
+  
+  #wifi-loader svg.circle-outer circle.back {
+    animation: circle-outer135 1.8s ease infinite 0.3s;
+  }
+  
+  #wifi-loader svg.circle-outer circle.front {
+    animation: circle-outer135 1.8s ease infinite 0.15s;
+  }
+  
+  #wifi-loader svg.circle-middle {
+    height: 60px;
+    width: 60px;
+  }
+  
+  #wifi-loader svg.circle-middle circle {
+    stroke-dasharray: 42.5 127.5;
+  }
+  
+  #wifi-loader svg.circle-middle circle.back {
+    animation: circle-middle6123 1.8s ease infinite 0.25s;
+  }
+  
+  #wifi-loader svg.circle-middle circle.front {
+    animation: circle-middle6123 1.8s ease infinite 0.1s;
+  }
+  
+  #wifi-loader svg.circle-inner {
+    height: 34px;
+    width: 34px;
+  }
+  
+  #wifi-loader svg.circle-inner circle {
+    stroke-dasharray: 22 66;
+  }
+  
+  #wifi-loader svg.circle-inner circle.back {
+    animation: circle-inner162 1.8s ease infinite 0.2s;
+  }
+  
+  #wifi-loader svg.circle-inner circle.front {
+    animation: circle-inner162 1.8s ease infinite 0.05s;
+  }
+  
+  #wifi-loader .text {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  
+  #wifi-loader .text::before, #wifi-loader .text::after {
+    content: attr(data-text);
+  }
+  
+  #wifi-loader .text::before {
+    color: var(--text-color);
+  }
+  
+  #wifi-loader .text::after {
+    color: var(--front-color);
+    animation: text-animation76 3.6s ease infinite;
+    position: absolute;
+    left: 0;
+  }
+  
+  @keyframes circle-outer135 {
+    0% {
+      stroke-dashoffset: 25;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 301;
+    }
+  
+    80% {
+      stroke-dashoffset: 276;
+    }
+  
+    100% {
+      stroke-dashoffset: 276;
+    }
+  }
+  
+  @keyframes circle-middle6123 {
+    0% {
+      stroke-dashoffset: 17;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 204;
+    }
+  
+    80% {
+      stroke-dashoffset: 187;
+    }
+  
+    100% {
+      stroke-dashoffset: 187;
+    }
+  }
+  
+  @keyframes circle-inner162 {
+    0% {
+      stroke-dashoffset: 9;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 106;
+    }
+  
+    80% {
+      stroke-dashoffset: 97;
+    }
+  
+    100% {
+      stroke-dashoffset: 97;
+    }
+  }
+  
+  @keyframes text-animation76 {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+  
+    50% {
+      clip-path: inset(0);
+    }
+  
+    100% {
+      clip-path: inset(0 0 0 100%);
+    }
+  }
+   
