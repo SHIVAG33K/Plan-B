@@ -62,6 +62,9 @@ def roadmap():
         return render_template("shows.html" , results = results,names = names)
     else:
         return render_template("roadmap.html")
-
+@app.route('/contact', methods = ['GET','POST'])
+def contact():
+    if request.method == 'POST':
+            
 if __name__ == '__main__':
     app.run(debug=True)
