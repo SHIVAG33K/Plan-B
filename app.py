@@ -2,6 +2,9 @@ from flask import Flask, render_template, url_for, request,redirect
 import requests
 from googlesearch import search
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
+
 app = Flask(__name__)
 def titles(url):  
     response = requests.get(url)
@@ -17,6 +20,32 @@ def titles(url):
 
     else:
         print('Failed to retrieve the website.')
+
+
+
+def configure():
+    load_dotenv()
+
+def query(data, is_file=False):
+    if is_file:
+        response = requests.post(os.getenv('API_URL'), files=data)
+    else:
+        response = requests.post(os.getenv('API_URL'), json=data)
+    return response.json()
+
+# Example usage for file upload
+configure()
+form_data = {
+    "files": ('r22', open('r22.pdf', 'rb'))
+}
+output_file = query(form_data, is_file=True)
+
+# Example usage for sending a question
+question_data = {
+    "question": f"{input("query: ")}"
+}
+output_question = query(question_data)
+print(output_question)
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -65,6 +94,30 @@ def roadmap():
 @app.route('/contact', methods = ['GET','POST'])
 def contact():
     if request.method == 'POST':
+        def configure():
+            load_dotenv()
+
+        def query(data, is_file=False):
+            if is_file:
+                response = requests.post(os.getenv('API_URL'), files=data)
+            else:
+                response = requests.post(os.getenv('API_URL'), json=data)
+            return response.json()
+
+        # Example usage for file upload
+        configure()
+        form_data = {
+            "files": ('r22', open('r22.pdf', 'rb'))
+        }
+        output_file = query(form_data, is_file=True)
+
+        # Example usage for sending a question
+        question_data = {
+            "question": f"{input("query: ")}"
+        }
+        output_question = query(question_data)
+        print(output_question)
+
             
 if __name__ == '__main__':
     app.run(debug=True)
